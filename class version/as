@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Morgan | Web Development Portfolio — CSS Fundamentals Lab</title>
+  <style>
+
+  </style>
+</head>
+<body>
+
+  <div class="page-container">
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <header class="page-header">
+      <img src="images/hero-banner.jpg" alt="Desk with a laptop showing colourful web page designs" class="hero-banner">
+      <img src="images/profile-pic.jpg" alt="Portrait of Alex Morgan" class="profile-pic">
+      <h1>Alex Morgan</h1>
+      <p class="tagline">Aspiring web developer crafting tidy, accessible pages</p>
+    </header>
+
+    <main>
+
+      <section id="about" class="content-section">
+        <h2>About Me</h2>
+        <p>Kia ora! I am a student web developer based in Wellington. I enjoy
+          turning plain markup into polished pages, and this portfolio was built
+          from scratch to practise the <span class="highlight">CSS box model</span>,
+          design tokens and responsive layout.</p>
+        <div class="callout">
+          <p><strong>Handy reminder:</strong> padding sits inside the border,
+            while margin sits outside it &mdash; keeping the two straight makes
+            layout debugging far less painful.</p>
+        </div>
+      </section>
+
+      <section id="skills" class="content-section">
+        <h2>Skills</h2>
+
+        <div class="skill-card">
+          <h3>Front-end</h3>
+          <ul>
+            <li>Semantic HTML5</li>
+            <li>CSS and the box model</li>
+            <li>Accessible forms</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Tools</h3>
+          <ul>
+            <li>Visual Studio Code</li>
+            <li>Git and GitHub</li>
+            <li>Browser developer tools</li>
+          </ul>
+        </div>
+
+        <h3>Skills at a glance</h3>
+        <table class="skills-table">
+          <thead>
+            <tr>
+              <th scope="col">Skill</th>
+              <th scope="col">Confidence</th>
+              <th scope="col">Learning since</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HTML</td>
+              <td>Confident</td>
+              <td>2024</td>
+            </tr>
+            <tr>
+              <td>CSS</td>
+              <td>Confident</td>
+              <td>2024</td>
+            </tr>
+            <tr>
+              <td>JavaScript</td>
+              <td>Building up</td>
+              <td>2025</td>
+            </tr>
+            <tr>
+              <td>Git</td>
+              <td>Confident</td>
+              <td>2024</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="projects" class="content-section">
+        <h2>Projects</h2>
+
+        <article class="project featured">
+          <img src="images/project-thumb-1.jpg" alt="Screenshot of the Weather Buddy dashboard" class="project-thumb">
+          <h3>Weather Buddy</h3>
+          <p>A dashboard that shows the day's forecast at a glance, styled with
+            CSS variables so the whole colour scheme can change in one place.</p>
+          <a href="#">View project</a>
+        </article>
+
+        <article class="project">
+          <img src="images/project-thumb-2.jpg" alt="Screenshot of the Recipe Box listing page" class="project-thumb">
+          <h3>Recipe Box</h3>
+          <p>A tidy recipe collection laid out with inline-block cards that
+            stack neatly on smaller screens.</p>
+          <a href="#">View project</a>
+        </article>
+
+        <article class="project">
+          <img src="images/project-thumb-3.jpg" alt="Screenshot of the Study Timer app" class="project-thumb">
+          <h3>Study Timer</h3>
+          <p>A simple study timer with hover states and smooth transitions on
+            every interactive element.</p>
+          <a href="#">View project</a>
+        </article>
+      </section>
+
+      <section id="contact" class="content-section">
+        <h2>Contact</h2>
+
+        <div class="contact-details">
+          <h3>Get in touch</h3>
+          <p>Email: <a href="mailto:alex.morgan@example.com">alex.morgan@example.com</a></p>
+          <p>Based in Wellington, New Zealand</p>
+        </div>
+
+        <form class="contact-form" action="#" method="post">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name">
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email">
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+
+          <button type="submit" class="submit-btn">Send message</button>
+        </form>
+      </section>
+
+    </main>
+
+  </div>
+
+  <footer class="page-footer">
+    <a href="#" class="social-icon">GitHub</a>
+    <a href="#" class="social-icon">LinkedIn</a>
+    <p>&copy; 2025 Alex Morgan &mdash; Built for the Week 8 CSS fundamentals lab</p>
+  </footer>
+
+</body>
+</html>

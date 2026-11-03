@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order Form</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 500px;
+        }
+        fieldset {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 15px;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 5px;
+        }
+        /* Spacing for form groups */
+        .form-group {
+            margin-bottom: 15px;
+        }
+        /* Make text inputs, selects, and textareas fill the container */
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box; /* Ensures padding doesn't push width over 100% */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        /* Add some specific colors to match the image's validation hints */
+        input[type="text"], input[type="email"], input[type="date"] {
+            border-color: #e57373; /* Red-ish border */
+        }
+        input[type="tel"], input[type="number"] {
+            border-color: #81c784; /* Green-ish border */
+        }
+        select {
+            border-color: #64b5f6; /* Blue-ish border */
+        }
+        /* Styling the inline radio and checkboxes */
+        .inline-group {
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+        .inline-group label {
+            margin-right: 15px;
+        }
+        p {
+            margin: 0 0 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="index.html" method="POST">
+        
+        <fieldset>
+            <legend>Customer Details</legend>
+
+            <div class="form-group">
+                <label for="fullName">Full name</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Your Pizza</legend>
+
+            <div>
+                <p>Size:</p>
+                <div class="inline-group">
+                    <input type="radio" id="small" name="size" value="small">
+                    <label for="small">Small</label>
+
+                    <input type="radio" id="medium" name="size" value="medium">
+                    <label for="medium">Medium</label>
+
+                    <input type="radio" id="large" name="size" value="large">
+                    <label for="large">Large</label>
+                </div>
+            </div>
+
+            <div>
+                <p>Toppings (choose as many as you like):</p>
+                <div class="inline-group">
+                    <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+                    <label for="mushrooms">Mushrooms</label>
+
+                    <input type="checkbox" id="olives" name="toppings" value="olives">
+                    <label for="olives">Olives</label>
+
+                    <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+                    <label for="pepperoni">Pepperoni</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="crust">Crust type</label>
+                <select id="crust" name="crust">
+                    <option value="">-- Please choose --</option>
+                    <option value="thin">Thin Crust</option>
+                    <option value="thick">Thick Crust</option>
+                    <option value="stuffed">Stuffed</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Delivery</legend>
+
+            <div class="form-group">
+                <label for="address">Delivery address</label>
+                <textarea id="address" name="address" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Preferred delivery date</label>
+                <input type="date" id="date" name="date">
+            </div>
+
+            <div class="form-group">
+                <label for="quantity">How many pizzas?</label>
+                <input type="number" id="quantity" name="quantity" value="1" min="1">
+            </div>
+        </fieldset>
+
+        <div>
+            <button type="submit">Place Order</button>
+        </div>
+
+    </form>
+
+</body>
+</html>
