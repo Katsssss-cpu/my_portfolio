@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Troy Scott</title>
     <link rel="stylesheet" href="style.css">
+</head>
 
 <body>
 
-    <nav aria-label="Main navigation">
+    <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
+            <li><a href="projects.html" aria-current="page">Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
@@ -24,8 +25,8 @@
             <h1>My Projects</h1>
         </header>
 
-        <section class="card" id="project-one" aria-labelledby="project-one-title">
-            <h2 id="project-one-title">Computer Hardware</h2>
+        <section class="card" id="hardware">
+            <h2>Computer Hardware</h2>
             <p>Current Custom Desktop Build:</p>
             <ul>
                 <li><strong>CPU:</strong> AMD Ryzen 5 3600</li>
@@ -36,17 +37,15 @@
             </ul>
         </section>
 
-        <section class="card" id="project-one" aria-labelledby="project-one-title">
-            <h2 id="project-one-title">C# Console Project</h2>
+        <section class="card" id="csharp-project">
+            <h2>C# Console Project</h2>
             <p>C# console project i've been working on</p>
-
 
             <ul class="tech-stack">
                 <li>C#</li>
                 <li>.NET</li>
                 <li>Console Program</li>
             </ul>
-
 
             <div class="code-window">
                 <div class="code-header">
@@ -55,63 +54,63 @@
                     <span class="dot green"></span>
                     <span class="filename">Program.cs</span>
                 </div>
-                <pre><code>// A snapshot of my core logic
-                    public void InitializeGame() 
-                    {
-                        Console.WriteLine("Starting the application...");
-                        int actionChoice;
-            
-            DisplayStatus(companionName, companionType, health, happiness, hunger, energy);
+                <pre><code>public void InitializeGame()
+{
+    Console.WriteLine("Starting the application...");
+    int actionChoice;
 
-            do
-            {
-                DisplayActionMenu(currentLocation);
-                
-                string userInput = Console.ReadLine();
-                try
+    DisplayStatus(companionName, companionType, health, happiness, hunger, energy);
+
+    do
+    {
+        DisplayActionMenu(currentLocation);
+
+        string userInput = Console.ReadLine();
+        try
+        {
+            actionChoice = Convert.ToInt32(userInput);
+        }
+        catch (Exception)
+        {
+            Console.WriteLine("Enter a whole number from the menu.");
+            actionChoice = 0;
+            continue;
+        }
+
+        switch (actionChoice)
+        {
+            case 1:
+                if (companionType == "cat" || companionType == "dog")
                 {
-                    actionChoice = Convert.ToInt32(userInput);    
+                    health = ChangeStat(health, 15);
+                    hunger = ChangeStat(hunger, -10);
+                    Console.WriteLine();
+                    Console.WriteLine($"{companionName} eats the apple.");
                 }
-                catch (Exception)
+                else if (companionType == "toaster")
                 {
-                    Console.WriteLine("Enter a whole number from the menu.");
-                    actionChoice = 0;
-                    continue;
+                    Console.WriteLine();
+                    Console.WriteLine("The toaster refuses the apple. Statistics unchanged.");
                 }
 
-                switch (actionChoice)
-                {
-                    case 1: // GIVE SNACK
-                        if (companionType == "cat" || companionType == "dog") {
-                            health = ChangeStat(health, 15);
-                            hunger = ChangeStat(hunger, -10);
-                            Console.WriteLine();
-                            Console.WriteLine($"{companionName} eats the apple.");
-                        } else if (companionType == "toaster") {
-                            Console.WriteLine();
-                            Console.WriteLine("The toaster refuses the apple. Statistics unchanged.");
-                        }
+                DisplayStatus(companionName, companionType, health, happiness, hunger, energy);
 
-                        DisplayStatus(companionName, companionType, health, happiness, hunger, energy);
-                        
-                        Console.WriteLine(); 
-                        Console.WriteLine("Press any key to continue...");
-                        Console.ReadKey(); 
-                        break;
-                    }</code></pre>
+                Console.WriteLine();
+                Console.WriteLine("Press any key to continue...");
+                Console.ReadKey();
+                break;
+        }
+    } while (actionChoice != 0);
+}</code></pre>
             </div>
-
 
             <a href="https://github.com/Katsssss-cpu" target="_blank" class="github-btn">View Code on GitHub</a>
         </section>
 
-        <section class="card" id="implementation" aria-labelledby="implementation-title">
-            <h2 id="implementation-title">Some of my short edits</h2>
-
+        <section class="card" id="video-edits">
+            <h2>Some of my short edits</h2>
 
             <div class="video-gallery">
-
-
                 <div class="video-container">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/rPc8ZiBsKzw?si=4Z843QOqMQ8Ko15G"
                         title="YouTube video player" frameborder="0"
@@ -119,19 +118,23 @@
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
 
-
                 <div class="video-container">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/_-D_Ou30-N0?si=0L7oUH0rD6YPNR25"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
                 </div>
+            </div>
         </section>
 
     </main>
 
     <footer>
-        <p>&copy; 2026 Troy. All rights reserved.</p>
+        <p>&copy; 2026 Troy Scott. All rights reserved.</p>
     </footer>
 </body>
+
+</html>
+
+
+</html>
