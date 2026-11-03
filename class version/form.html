@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,24 +10,27 @@
             font-family: sans-serif;
             margin: 20px;
         }
+
         form {
             max-width: 500px;
         }
+
         fieldset {
             margin-bottom: 20px;
             border: 1px solid #ccc;
             border-radius: 4px;
             padding: 15px;
         }
+
         legend {
             font-weight: bold;
             padding: 0 5px;
         }
-        /* Spacing for form groups */
+
         .form-group {
             margin-bottom: 15px;
         }
-        /* Make text inputs, selects, and textareas fill the container */
+
         input[type="text"],
         input[type="email"],
         input[type="tel"],
@@ -37,37 +41,45 @@
             width: 100%;
             padding: 8px;
             margin-top: 5px;
-            box-sizing: border-box; /* Ensures padding doesn't push width over 100% */
+            box-sizing: border-box;
             border: 1px solid #ccc;
             border-radius: 4px;
         }
-        /* Add some specific colors to match the image's validation hints */
-        input[type="text"], input[type="email"], input[type="date"] {
-            border-color: #e57373; /* Red-ish border */
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"] {
+            border-color: #e57373;
         }
-        input[type="tel"], input[type="number"] {
-            border-color: #81c784; /* Green-ish border */
+
+        input[type="tel"],
+        input[type="number"] {
+            border-color: #81c784;
         }
+
         select {
-            border-color: #64b5f6; /* Blue-ish border */
+            border-color: #64b5f6;
         }
-        /* Styling the inline radio and checkboxes */
+
         .inline-group {
             margin-top: 5px;
             margin-bottom: 15px;
         }
+
         .inline-group label {
             margin-right: 15px;
         }
+
         p {
             margin: 0 0 5px 0;
         }
     </style>
 </head>
+
 <body>
 
     <form action="index.html" method="POST">
-        
+
         <fieldset>
             <legend>Customer Details</legend>
 
@@ -155,4 +167,5 @@
     </form>
 
 </body>
+
 </html>
